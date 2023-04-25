@@ -52,12 +52,34 @@
 //   console.log("That is a lot of ninjas!");
 // }
 
-const password = "p@sword12345";
+// const password = "p@sword12345";
 
-if (password.length >= 12) {
+// if (password.length >= 12) {
+//   console.log("That password is mighty strong");
+// } else if (password.length >= 8) {
+//   console.log("That password is long enough!");
+// } else {
+//   console.log("Password is not long enougth");
+// }
+
+/************************************** Logical Operators OR and AND && ***********************************/
+
+const password = "password1234";
+
+if (password.length >= 12 && password.includes("@")) {
   console.log("That password is mighty strong");
-} else if (password.length >= 8) {
-  console.log("That password is long enough!");
+} else if (password.length >= 8 || password.includes("@")) {
+  console.log("That password is strong enough!");
 } else {
   console.log("Password is not long enougth");
+}
+
+/************************************** logical NOT ***********************************/
+
+let user = false;
+
+if (!user) {
+  console.log("It is indeed false");
+} else {
+  console.log("It is true");
 }
