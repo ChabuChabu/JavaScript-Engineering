@@ -64,22 +64,39 @@
 
 /************************************** Logical Operators OR and AND && ***********************************/
 
-const password = "password1234";
+// const password = "password1234";
 
-if (password.length >= 12 && password.includes("@")) {
-  console.log("That password is mighty strong");
-} else if (password.length >= 8 || password.includes("@")) {
-  console.log("That password is strong enough!");
-} else {
-  console.log("Password is not long enougth");
-}
+// if (password.length >= 12 && password.includes("@")) {
+//   console.log("That password is mighty strong");
+// } else if (password.length >= 8 || password.includes("@")) {
+//   console.log("That password is strong enough!");
+// } else {
+//   console.log("Password is not long enougth");
+// }
 
 /************************************** logical NOT ***********************************/
 
-let user = false;
+// let user = false;
 
-if (!user) {
-  console.log("It is indeed false");
-} else {
-  console.log("It is true");
+// if (!user) {
+//   console.log("It is indeed false");
+// } else {
+//   console.log("It is true");
+// }
+
+/************************************** break and continue ***********************************/
+
+const scores = [50, 25, 0, 30, 100, 20, 10];
+
+for (let i = 0; i < scores.length; i++) {
+  if (scores[i] === 0) {
+    continue;
+  }
+
+  console.log("Your score:", scores[i]);
+
+  if (scores[i] === 100) {
+    console.log("Congrats,you got the top score!!");
+    break;
+  }
 }
