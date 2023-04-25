@@ -5,8 +5,18 @@
 // greet();
 
 //function expression
-const speak = function (name, time) {
-  console.log(`good ${time} ${name}`);
+
+// const speak = function (name, time) {
+//   console.log(`good ${time} ${name}`);
+// };
+
+// speak("chabu", "morning");
+
+//Returning values
+
+const calcArea = function (radius) {
+  return 3.14 * radius ** 2;
 };
 
-speak("chabu", "morning");
+const area = calcArea(5);
+console.log(area);
