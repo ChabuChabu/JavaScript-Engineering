@@ -86,38 +86,55 @@
 
 /************************************** break and continue ***********************************/
 
-const scores = [50, 25, 0, 30, 100, 20, 10];
+// const scores = [50, 25, 0, 30, 100, 20, 10];
 
-for (let i = 0; i < scores.length; i++) {
-  if (scores[i] === 0) {
-    continue;
-  }
+// for (let i = 0; i < scores.length; i++) {
+//   if (scores[i] === 0) {
+//     continue;
+//   }
 
-  console.log("Your score:", scores[i]);
+//   console.log("Your score:", scores[i]);
 
-  if (scores[i] === 100) {
-    console.log("Congrats,you got the top score!!");
-    break;
-  }
-}
+//   if (scores[i] === 100) {
+//     console.log("Congrats,you got the top score!!");
+//     break;
+//   }
+// }
 
 /************************************** switch statements ***********************************/
 
-const grade = "A";
+// const grade = "A";
 
-switch (grade) {
-  case "A":
-    console.log("You got an A");
-    break;
-  case "B":
-    console.log("You got an B");
-    break;
-  case "C":
-    console.log("You got an C");
-    break;
-  case "D":
-    console.log("You got an D");
-    break;
-  default:
-    console.log("Not a valid grade");
+// switch (grade) {
+//   case "A":
+//     console.log("You got an A");
+//     break;
+//   case "B":
+//     console.log("You got an B");
+//     break;
+//   case "C":
+//     console.log("You got an C");
+//     break;
+//   case "D":
+//     console.log("You got an D");
+//     break;
+//   default:
+//     console.log("Not a valid grade");
+// }
+
+/************************************** variable & block scope ***********************************/
+
+const age = 30;
+
+if (true) {
+  const age = 50;
+  const name = "shaun";
+  console.log("inside first code block", age, name);
+
+  if (true) {
+    const age = 20;
+    console.log("inside the first code block", age);
+  }
 }
+
+console.log("outside code block", age);
