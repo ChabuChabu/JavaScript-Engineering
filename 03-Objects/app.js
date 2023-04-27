@@ -53,7 +53,7 @@
 // console.log(random);
 // console.log(Math.round(random * 5));
 
-/***********************  Primitive types ****************************/
+/***********************  Primitive data types ****************************/
 
 let scoreOne = 50;
 let scoreTwo = scoreOne;
