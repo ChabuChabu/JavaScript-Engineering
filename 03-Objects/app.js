@@ -53,7 +53,7 @@
 // console.log(random);
 // console.log(Math.round(random * 5));
 
-/***********************  Primitive values ****************************/
+/***********************  Primitive types ****************************/
 
 let scoreOne = 50;
 let scoreTwo = scoreOne;
@@ -63,7 +63,7 @@ console.log(`scoreOne: ${scoreOne}`, `scoreTwo: ${scoreTwo}`);
 scoreOne = 100;
 console.log(`scoreOne: ${scoreOne}`, `scoreTwo: ${scoreTwo}`);
 
-/***********************  referecne variable ****************************/
+/***********************  referecne types ****************************/
 
 const userOne = { name: "ryu", age: 30 };
 const userTwo = userOne;
