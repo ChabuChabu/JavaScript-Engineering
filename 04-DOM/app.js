@@ -1,4 +1,9 @@
 // const para = document.querySelector("p");
+// const ul = document.querySelector("ul");
+// const items = document.querySelectorAll("li");
+// const button = document.querySelector("button");
+const copy = document.querySelector(".copy-me");
+console.log(copy);
 
 //console.log(para.innerText);
 //para.innerText = "ninjas are awesome!";
@@ -75,17 +80,14 @@
 // button.addEventListener("click", () => {
 //   console.log("You clicked me");
 // });
-const ul = document.querySelector("ul");
-const items = document.querySelectorAll("li");
-const button = document.querySelector("button");
 
 /*******add items to dom *******/
-button.addEventListener("click", () => {
-  const li = document.createElement("li");
-  li.textContent = "something new to do";
-  //ul.append(li);
-  ul.prepend(li);
-});
+// button.addEventListener("click", () => {
+//   const li = document.createElement("li");
+//   li.textContent = "something new to do";
+//   //ul.append(li);
+//   ul.prepend(li);
+// });
 
 // ul.remove();
 
@@ -101,10 +103,25 @@ button.addEventListener("click", () => {
 //     e.target.remove();
 //   });
 // });
-/******* event bubbling *******/
-ul.addEventListener("click", (e) => {
-  console.log(e);
-  if (e.target.tagName === "LI") {
-    e.target.remove();
-  }
+/******************** event bubbling *******************/
+// ul.addEventListener("click", (e) => {
+//   console.log(e);
+//   if (e.target.tagName === "LI") {
+//     e.target.remove();
+//   }
+// });
+
+/******************** other events *******************/
+
+copy.addEventListener("copy", () => {
+  console.log("My content is copyright protected");
+});
+
+const box = document.querySelector(".box");
+box.addEventListener("mousemove", (e) => {
+  box.textContent = `x pos - ${e.offsetX}  y pos - ${e.offsetY}`;
+});
+
+document.addEventListener("wheel", (e) => {
+  console.log(e.pageX, e.pageY);
 });
