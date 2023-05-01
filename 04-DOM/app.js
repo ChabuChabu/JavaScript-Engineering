@@ -1,4 +1,4 @@
-const para = document.querySelector("p");
+// const para = document.querySelector("p");
 
 //console.log(para.innerText);
 //para.innerText = "ninjas are awesome!";
@@ -25,12 +25,64 @@ const para = document.querySelector("p");
 // });
 
 /****************** setting attributes ***********************/
-const link = document.querySelector("a");
+// const link = document.querySelector("a");
 
-console.log(link.getAttribute("href"));
-link.setAttribute("href", "https://www.thenetninja.co.uk");
-link.innerText = "The Net Ninja Website";
-const mssg = document.querySelector("p");
-console.log(mssg.getAttribute("class"));
-mssg.setAttribute("class", "success");
-mssg.setAttribute("style", "color: green;");
+// console.log(link.getAttribute("href"));
+// link.setAttribute("href", "https://www.thenetninja.co.uk");
+// link.innerText = "The Net Ninja Website";
+// const mssg = document.querySelector("p");
+// console.log(mssg.getAttribute("class"));
+// mssg.setAttribute("class", "success");
+// mssg.setAttribute("style", "color: green;");
+
+/****************** adding and removing styles ***********************/
+
+// const content = document.querySelector("p");
+
+// console.log(content.classList);
+// content.classList.add("error");
+// content.classList.remove("error");
+// content.classList.add("success");
+
+// const paras = document.querySelectorAll("p");
+// paras.forEach((p) => {
+//   if (p.textContent.includes("error")) {
+//     p.classList.add("error");
+//   } else if (p.textContent.includes("success")) {
+//     p.classList.add("success");
+//   }
+// });
+
+// const title = document.querySelector(".title");
+// title.classList.toggle("test");
+// title.classList.toggle("test");
+
+// const article = document.querySelector("article");
+// Array.from(article.children).forEach((child) => {
+//   child.classList.add("article-element");
+// });
+
+// const title = document.querySelector("h2");
+// console.log(title.parentElement);
+// console.log(title.parentElement.parentElement);
+// console.log(title.nextElementSibling);
+// console.log(title.previousElementSibling);
+
+/****************** events and event listiners ***********************/
+
+// const button = document.querySelector("button");
+
+// button.addEventListener("click", () => {
+//   console.log("You clicked me");
+// });
+
+const items = document.querySelectorAll("li");
+
+items.forEach((item) => {
+  item.addEventListener("click", (e) => {
+    // console.log("Item clicked");
+    // console.log(e);
+    // console.log(e.target);
+    e.target.style.textDecoration = "line-through";
+  });
+});
