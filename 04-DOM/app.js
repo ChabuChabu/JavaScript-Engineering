@@ -89,14 +89,22 @@ button.addEventListener("click", () => {
 
 // ul.remove();
 
-items.forEach((item) => {
-  item.addEventListener("click", (e) => {
-    // console.log("Item clicked");
-    // console.log(e);
-    // console.log(e.target);
-    // e.target.style.textDecoration = "line-through";
+// items.forEach((item) => {
+//   item.addEventListener("click", (e) => {
+//     console.log("Event in LI");
+//     e.stopPropagation();
+//     // console.log(e);
+//     // console.log(e.target);
+//     // e.target.style.textDecoration = "line-through";
 
-    /*******remove of items from dom *******/
+//     /*******remove of items from dom *******/
+//     e.target.remove();
+//   });
+// });
+
+ul.addEventListener("click", (e) => {
+  console.log(e);
+  if (e.target.tagName === "LI") {
     e.target.remove();
-  });
+  }
 });
