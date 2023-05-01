@@ -1,0 +1,19 @@
+body {
+  background: #eee;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+h1 {
+  font-size: 2rem;
+  text-align: center;
+}
+form {
+  max-width: 200px;
+  margin: 40px auto;
+  background: #eee;
+  padding: 10px;
+}
+input {
+  display: block;
+  margin: 10px auto;
+  padding: 4px;
+}
