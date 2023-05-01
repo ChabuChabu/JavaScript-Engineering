@@ -2,8 +2,8 @@
 // const ul = document.querySelector("ul");
 // const items = document.querySelectorAll("li");
 // const button = document.querySelector("button");
-const copy = document.querySelector(".copy-me");
-console.log(copy);
+// const copy = document.querySelector(".copy-me");
+// const box = document.querySelector(".box");
 
 //console.log(para.innerText);
 //para.innerText = "ninjas are awesome!";
@@ -113,15 +113,33 @@ console.log(copy);
 
 /******************** other events *******************/
 
-copy.addEventListener("copy", () => {
-  console.log("My content is copyright protected");
+// copy.addEventListener("copy", () => {
+//   console.log("My content is copyright protected");
+// });
+
+// box.addEventListener("mousemove", (e) => {
+//   box.textContent = `x pos - ${e.offsetX}  y pos - ${e.offsetY}`;
+// });
+
+// document.addEventListener("wheel", (e) => {
+//   console.log(e.pageX, e.pageY);
+// });
+
+/******************** making a popup*******************/
+
+const button = document.querySelector("button");
+const popup = document.querySelector(".popup-wrapper");
+const popupClose = document.querySelector(".popup-close");
+const wrapper = document.querySelector(".popup-wrapper");
+
+button.addEventListener("click", () => {
+  popup.style.display = "block";
 });
 
-const box = document.querySelector(".box");
-box.addEventListener("mousemove", (e) => {
-  box.textContent = `x pos - ${e.offsetX}  y pos - ${e.offsetY}`;
+popupClose.addEventListener("click", () => {
+  popup.style.display = "none";
 });
 
-document.addEventListener("wheel", (e) => {
-  console.log(e.pageX, e.pageY);
+wrapper.addEventListener("click", () => {
+  popup.style.display = "none";
 });
