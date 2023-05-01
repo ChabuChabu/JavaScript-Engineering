@@ -101,7 +101,7 @@ button.addEventListener("click", () => {
 //     e.target.remove();
 //   });
 // });
-
+/******* event bubbling *******/
 ul.addEventListener("click", (e) => {
   console.log(e);
   if (e.target.tagName === "LI") {
