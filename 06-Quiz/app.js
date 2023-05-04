@@ -22,6 +22,7 @@ form.addEventListener("submit", (e) => {
   });
 
   //show answe on page
+  scrollTo(0, 0);
   showResult.classList.remove("d-none");
   result.innerText = `${score}%`;
 });
