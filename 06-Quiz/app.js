@@ -21,8 +21,18 @@ form.addEventListener("submit", (e) => {
     }
   });
 
-  //show answe on page
+  //show answer on page
   scrollTo(0, 0);
   showResult.classList.remove("d-none");
-  result.innerText = `${score}%`;
+
+  //score animation
+  let output = 0;
+  const timer = setInterval(() => {
+    result.innerText = `${output}%`;
+    if (output === score) {
+      clearInterval(timer);
+    } else {
+      output++;
+    }
+  }, 10);
 });
