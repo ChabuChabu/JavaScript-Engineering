@@ -74,8 +74,50 @@
 
 /***************find method****************/
 
-const scores = [10, 5, 0, 40, 60, 10, 20, 70];
+// const scores = [10, 5, 0, 40, 60, 10, 20, 70];
 
-const firstHighScore = scores.find((score) => score > 30);
+// const firstHighScore = scores.find((score) => score > 30);
 
-console.log(firstHighScore);
+// console.log(firstHighScore);
+
+/*************** sorting strings ****************/
+
+//example 1
+const names = ["mario", "shaun", "chun-li", "yoshi", "luigi"];
+
+//the sort array is destructive as it alters the original array
+// names.sort();
+// names.reverse();
+// console.log(names);
+
+// //example 2
+const scores = [10, 50, 20, 5, 35, 70, 45];
+
+scores.sort((a, b) => a - b);
+//scores.sort();
+// scores.reverse();
+console.log(scores);
+
+//example 3
+
+const players = [
+  { player: "mario", score: 20 },
+  { player: "luigi", score: 10 },
+  { player: "chun-li", score: 50 },
+  { player: "yoshi", score: 30 },
+  { player: "shaun", score: 70 },
+];
+
+// players.sort((a, b) => {
+//   if (a.score > b.score) {
+//     return -1;
+//   } else if (b.score > a.score) {
+//     return 1;
+//   } else {
+//     return 0;
+//   }
+// });
+
+// players.sort((a, b) => b.score - a.score);
+
+// console.log(players);
