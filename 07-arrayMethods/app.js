@@ -56,18 +56,40 @@
 
 // console.log(result);
 
-const scores = [
-  { player: "mario", score: 50 },
-  { player: "yoshi", score: 30 },
-  { player: "mario", score: 70 },
-  { player: "yoshi", score: 60 },
+// const scores = [
+//   { player: "mario", score: 50 },
+//   { player: "yoshi", score: 30 },
+//   { player: "mario", score: 70 },
+//   { player: "yoshi", score: 60 },
+// ];
+
+// const marioTotal = scores.reduce((acc, curr) => {
+//   if (curr.player === "mario") {
+//     acc += curr.score;
+//   }
+//   return acc;
+// }, 0);
+
+// console.log(marioTotal);
+
+/***************chaining array methods****************/
+
+const products = [
+  { name: "gold star", price: 30 },
+  { name: "green shell", price: 10 },
+  { name: "red shell", price: 40 },
+  { name: "banana skin", price: 5 },
+  { name: "mushroom", price: 50 },
 ];
 
-const marioTotal = scores.reduce((acc, curr) => {
-  if (curr.player === "mario") {
-    acc += curr.score;
-  }
-  return acc;
-}, 0);
+// const filtered = products.filter((product) => product.price > 20);
 
-console.log(marioTotal);
+// const promos = filtered.map((product) => {
+//   return `the ${product.name} is ${product.price / 2} kwacha`;
+// });
+
+const promos = products
+  .filter((product) => product.price > 20)
+  .map((product) => `the ${product.name} is ${product.price / 2} kwacha`);
+
+console.log(promos);
