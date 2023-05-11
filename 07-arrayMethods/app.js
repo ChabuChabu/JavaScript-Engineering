@@ -56,18 +56,28 @@
 
 // console.log(result);
 
-const scores = [
-  { player: "mario", score: 50 },
-  { player: "yoshi", score: 30 },
-  { player: "mario", score: 70 },
-  { player: "yoshi", score: 60 },
-];
+// const scores = [
+//   { player: "mario", score: 50 },
+//   { player: "yoshi", score: 30 },
+//   { player: "mario", score: 70 },
+//   { player: "yoshi", score: 60 },
+// ];
 
-const marioTotal = scores.reduce((acc, curr) => {
-  if (curr.player === "mario") {
-    acc += curr.score;
-  }
-  return acc;
-}, 0);
+// const marioTotal = scores.reduce((acc, curr) => {
+//   if (curr.player === "mario") {
+//     acc += curr.score;
+//   }
+//   return acc;
+// }, 0);
 
-console.log(marioTotal);
+// console.log(marioTotal);
+
+/************** Sort method ***************/
+
+const scores = [10, 30, 15, 25, 50, 40, 5, 40, 45, 60, 70];
+
+// scores.sort();
+
+const raking = scores.sort((a, b) => a - b);
+
+console.log(raking);
