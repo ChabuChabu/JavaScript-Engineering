@@ -3,9 +3,9 @@ const getTodos = (callback) => {
 
   request.addEventListener("readystatechange", () => {
     if (request.readyState === 4 && request.status === 200) {
-      callback();
+      callback(undefined, request.responseText);
     } else if (request.readyState === 4) {
-      console.log("Could not fetch the data!!");
+      callback("could not fetch data", undefined);
     }
   });
 
@@ -13,4 +13,16 @@ const getTodos = (callback) => {
   request.send();
 };
 
-getTodos(() => {});
+console.log(1);
+console.log(2);
+getTodos((err, data) => {
+  console.log("Callback fired!!");
+  if (err) {
+    console.log(err);
+  } else {
+    console.log(data);
+  }
+});
+
+console.log(3);
+console.log(4);
